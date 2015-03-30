@@ -1,0 +1,8 @@
+<resources>
+
+    <color name="tab_scrollbar">#4642e3</color>
+    <color name="color_black">#000000</color>
+    <color name="color_red">#fd3000</color>
+    <color name="color_blue">#4707ff</color>
+<color name="color_gray">#898686</color>
+</resources>

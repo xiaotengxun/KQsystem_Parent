@@ -1,0 +1,251 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:id="@+id/rel1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp" >
+
+        <RelativeLayout
+            android:id="@+id/rel1_1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp" >
+
+            <TextView
+                android:id="@+id/kq_lable1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/kq_lable1"
+                android:textColor="@color/color_blue"
+                android:textSize="20sp" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/kq_lable1"
+                android:layout_marginTop="3dp"
+                android:background="@color/color_blue" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rel2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rel1_1" >
+
+            <RelativeLayout
+                android:id="@+id/rel2_1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <RelativeLayout
+                    android:id="@+id/rel2_1_1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp" >
+
+                    <ImageView
+                        android:id="@+id/kq_img_qingjia"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/kq_qingjia" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="3dp"
+                        android:layout_toRightOf="@+id/kq_img_qingjia"
+                        android:text="@string/kq_qingjia"
+                        android:textColor="@color/color_black"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/kq_qingjia"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="50dp"
+                        android:text="0次"
+                        android:textColor="@color/color_black"
+                        android:textSize="18sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rel2_1_1"
+                    android:layout_marginTop="5dp" >
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/color_gray" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rel2_2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rel2_1"
+                android:layout_marginTop="5dp" >
+
+                <RelativeLayout
+                    android:id="@+id/rel2_2_1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" >
+
+                    <ImageView
+                        android:id="@+id/kq_img_queqing"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/kq_queqing" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="3dp"
+                        android:layout_toRightOf="@+id/kq_img_queqing"
+                        android:text="@string/kq_queqing"
+                        android:textColor="@color/color_black"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/kq_queqing"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="50dp"
+                        android:text="0次"
+                        android:textColor="@color/color_black"
+                        android:textSize="18sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rel2_2_1"
+                    android:layout_marginTop="5dp" >
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/color_gray" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rel2_3"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rel2_2"
+                android:layout_marginTop="5dp" >
+
+                <RelativeLayout
+                    android:id="@+id/rel2_3_1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" >
+
+                    <ImageView
+                        android:id="@+id/kq_img_chidao"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/kq_chidao" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="3dp"
+                        android:layout_toRightOf="@+id/kq_img_chidao"
+                        android:text="@string/kq_chidao"
+                        android:textColor="@color/color_black"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/kq_chidao"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="50dp"
+                        android:text="0次"
+                        android:textColor="@color/color_black"
+                        android:textSize="18sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rel2_3_1"
+                    android:layout_marginTop="5dp" >
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/color_gray" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rel3"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rel1"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="5dp" >
+
+        <RelativeLayout
+            android:id="@+id/rel3_1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+                 <TextView
+                android:id="@+id/kq_lable2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/kq_lable2"
+                android:textColor="@color/color_blue"
+                android:textSize="20sp" />
+                  <TextView
+                android:id="@+id/kq_pertage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_blue"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="30dp"
+                android:textSize="20sp" />
+
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/kq_lable2"
+                android:layout_marginTop="3dp"
+                android:background="@color/color_blue" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/rel3_1" >
+
+            <ListView
+                android:id="@+id/kq_lsv"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scrollbars="none" >
+            </ListView>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

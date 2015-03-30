@@ -1,0 +1,34 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <ListView
+        android:id="@+id/roster_chat"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="100dp"
+        android:listSelector="@null"
+        android:scrollbars="none" >
+    </ListView>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true" >
+
+        <EditText
+            android:id="@+id/chat_input"
+            android:layout_width="200dp"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/btn_send"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_toRightOf="@+id/chat_input" />
+    </RelativeLayout>
+
+</RelativeLayout>
