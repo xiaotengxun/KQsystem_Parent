@@ -41,13 +41,6 @@
         android:layout_toRightOf="@+id/rel1"
         android:orientation="vertical" >
 
-        <TextView
-            android:id="@+id/kq_kqinfo_teacher"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="chenshuwan"
-            android:textColor="@color/color_black"
-            android:textSize="15sp" />
 
         <TextView
             android:id="@+id/kq_kqinfo_msg"

@@ -4,5 +4,7 @@
     <color name="color_black">#000000</color>
     <color name="color_red">#fd3000</color>
     <color name="color_blue">#4707ff</color>
-<color name="color_gray">#898686</color>
+    <color name="color_gray">#898686</color>
+    <color name="color_bg">#979393</color>
+
 </resources>

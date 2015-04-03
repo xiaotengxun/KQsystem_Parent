@@ -58,12 +58,10 @@ public class KQInfoAdapter extends BaseAdapter {
 	public View getView(int position, View convertView, ViewGroup parent) {
 		convertView = mInflater.inflate(R.layout.kq_kqinfo_item, null);
 		ViewHolder vh = new ViewHolder();
-		vh.tvTname = (TextView) convertView.findViewById(R.id.kq_kqinfo_teacher);
 		vh.tvMsg = (TextView) convertView.findViewById(R.id.kq_kqinfo_msg);
 		vh.tvDateTime = (TextView) convertView.findViewById(R.id.kq_kqinfo_time);
 		vh.btnDelete = (ImageView) convertView.findViewById(R.id.kq_kqinfo_delete);
 		KQInfo kqInfo = list.get(position);
-		vh.tvTname.setText(kqInfo.getTname());
 		vh.tvMsg.setText(kqInfo.getMsg());
 		vh.tvDateTime.setText(kqInfo.getDateTime());
 		Constant constant = new Constant();
@@ -71,7 +69,7 @@ public class KQInfoAdapter extends BaseAdapter {
 		constant.imgId = R.drawable.kq_info_delete_no;
 		vh.btnDelete.setTag(constant);
 		if (kqInfo.getIsRead() == 0) {
-			vh.tvTname.setTextColor(Color.RED);
+			vh.tvDateTime.setTextColor(Color.RED);
 		}
 		if (isDeleteBtnShow == true) {
 			vh.btnDelete.setVisibility(View.VISIBLE);
@@ -123,7 +121,7 @@ public class KQInfoAdapter extends BaseAdapter {
 	}
 
 	private class ViewHolder {
-		TextView tvTname, tvMsg, tvDateTime;
+		TextView  tvMsg, tvDateTime;
 		ImageView btnDelete;
 	};
 

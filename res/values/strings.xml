@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
+<string name="back_tip1">再按一次推出!</string>
     <string name="app_name">考勤家长版</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>

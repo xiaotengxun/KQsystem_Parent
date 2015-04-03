@@ -31,7 +31,7 @@ public class DBHelper extends SQLiteOpenHelper {
 				+ "Jtime  varchar(10),IsKQ  varchar(3) DEFAULT '未提交',IsSaved varchar(3) default '否')");
 		db.execSQL("CREATE TABLE  KQresult  (Kno integer primary key AUTOINCREMENT,Rno  int,Jno  int ,Sno  varchar(15) ,Kstate  varchar(3),"
 				+ "Kmarks  varchar(20) DEFAULT '无',IsSubmin  varchar(3) DEFAULT '未提交',InMan  varchar(20),InTime  datetime)");
-		db.execSQL("CREATE TABLE KqInfo (Id integer primary key AUTOINCREMENT,Info varchar(200),IsRead int DEFAULT '0',ReceiveTime datetime,InMan varchar(10))");
+		db.execSQL("CREATE TABLE KqInfo (Id integer primary key AUTOINCREMENT,Info varchar(200),ReceiveTime datetime,IsRead default '0')");
 	}
 
 	@Override

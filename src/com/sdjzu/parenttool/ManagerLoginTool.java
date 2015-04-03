@@ -31,7 +31,8 @@ public class ManagerLoginTool {
 		web.getTeachProssBySno(sno);
 	}
 
-	public void secondLogin(String tno) {
-
+	public void secondLogin(String sno) {
+		web.getTeachTaskBySno(sno);
+		web.getTeachProssBySno(sno);
 	}
 }

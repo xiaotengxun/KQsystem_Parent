@@ -27,8 +27,10 @@ public class LocalSqlTool {
 	 * @param t
 	 */
 	public void insertTeachTaskByTaskNo(List<TeachTask> tList) {
-		String sql = "	insert into TeachTask(Rno,Cno,Cname,Tname,Rclass,Ctype,Rweek,Rterms) values(?,?,?,?,?,?,?,?)";
+		String sql="delete from TeachTask;";
 		db = DatabaseManager.getInstance(context);
+		db.execSQL(sql);
+		 sql = "	insert into TeachTask(Rno,Cno,Cname,Tname,Rclass,Ctype,Rweek,Rterms) values(?,?,?,?,?,?,?,?)";
 		db.beginTransaction();
 		try {
 			for (int i = 0; i < tList.size(); i++) {
@@ -70,7 +72,9 @@ public class LocalSqlTool {
 		if (lit.size() == 0)
 			return;
 		db = DatabaseManager.getInstance(context);
-		String sql = "insert into TeachProgress  (Jno ,Rno,Cname,Tname,Jclass,Jweek,Jtime,Jaddress,StartTime,EndTime,IsKQ ,InMan  ,InTime) values(?,?,?,?,?,?,?,?,?,?,?,?,?)";
+		String sql="delete from TeachProgress";
+		db.execSQL(sql);
+		 sql = "insert into TeachProgress  (Jno ,Rno,Cname,Tname,Jclass,Jweek,Jtime,Jaddress,StartTime,EndTime,IsKQ ,InMan  ,InTime) values(?,?,?,?,?,?,?,?,?,?,?,?,?)";
 		db.beginTransaction();
 		try {
 			for (int i = 0; i < lit.size(); i++) {
@@ -88,6 +92,7 @@ public class LocalSqlTool {
 			db.endTransaction();
 		}
 	}
+
 	/**
 	 * 更新考勤信息被阅读过
 	 * 
@@ -100,7 +105,7 @@ public class LocalSqlTool {
 			db.execSQL(sql);
 		}
 	}
-	
+
 	/**
 	 * 向本地插入最新的考勤信息
 	 * 
@@ -108,15 +113,13 @@ public class LocalSqlTool {
 	 */
 	public void insertKqInfo(List<KQInfo> list) {
 		db = DatabaseManager.getInstance(context);
-		String sql = "insert into KqInfo(Info,IsRead,ReceiveTime,InMan values(?,?,?,?))";
+		String sql = "insert into KqInfo(Info,ReceiveTime,IsRead values(?,?,?))";
 		db.beginTransaction();
 		int counts = list.size();
 		try {
 			for (int i = 0; i < counts; i++) {
 				KQInfo kqInfo = list.get(i);
-				db.execSQL(sql,
-						new String[] { kqInfo.getMsg(), String.valueOf(kqInfo.getIsRead()), kqInfo.getDateTime(),
-								kqInfo.getTname() });
+				db.execSQL(sql, new String[] { kqInfo.getMsg(), kqInfo.getDateTime(),String.valueOf(kqInfo.getIsRead())});
 			}
 			db.setTransactionSuccessful();
 		} catch (Exception e) {
@@ -124,6 +127,7 @@ public class LocalSqlTool {
 			db.endTransaction();
 		}
 	}
+
 	/**
 	 * 获得本地考勤信息
 	 * 
@@ -137,9 +141,7 @@ public class LocalSqlTool {
 		while (cursor.moveToNext()) {
 			KQInfo kqInfo = new KQInfo();
 			kqInfo.setDateTime(cursor.getString(cursor.getColumnIndex("ReceiveTime")));
-			kqInfo.setIsRead(cursor.getInt(cursor.getColumnIndex("IsRead")));
 			kqInfo.setMsg(cursor.getString(cursor.getColumnIndex("Info")));
-			kqInfo.setTname(cursor.getString(cursor.getColumnIndex("InMan")));
 			kqInfo.setId(cursor.getInt(cursor.getColumnIndex("Id")));
 		}
 		cursor.close();

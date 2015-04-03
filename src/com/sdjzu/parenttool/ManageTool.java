@@ -153,10 +153,10 @@ public class ManageTool {
 	 * @param uno
 	 * @return
 	 */
-	public List<String> getLatestKqInfoByUno(String uno) {
+	public List<String> getLatestKqInfoByParentNo(String no) {
 		try {
 			WebTool web = new WebTool(context);
-			return web.getLatestKqInfoByUno(uno);
+			return web.getLatestKqInfoByParentNo(no);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

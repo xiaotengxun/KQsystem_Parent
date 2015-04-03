@@ -31,7 +31,7 @@ public class KqCheckFrag extends Fragment {
 	private List<KQStuPerson> listKq = new ArrayList<KQStuPerson>();
 	private Handler mHandler;
 	private KqAdater kqAdapter;
-	private static final int KQ_GET_SUCCESS = 0;
+	private  final int KQ_GET_SUCCESS = 0;
 	private ManageTool manageTool;
 	private String userName = "";
 	private String kqCountJson="";
@@ -84,11 +84,13 @@ public class KqCheckFrag extends Fragment {
 	}
 	public void parseJson(String jsonData) {
 		JsonReader reader = new JsonReader(new StringReader(jsonData));
+		Log.i("chen", "jsonData="+jsonData);
 		try {
 			reader.beginArray();
 			reader.beginObject();// 开始解析对象
 			while (reader.hasNext()) {
 				String tagName = reader.nextName();
+				Log.i("chen", "tagName="+tagName);
 				if (tagName.equals("qingJia")) {
 					textQingjia=reader.nextString();
 				} else if(tagName.equals("chiDao")){
@@ -102,6 +104,7 @@ public class KqCheckFrag extends Fragment {
 			reader.endObject();// 结束对象解析
 			reader.endArray();
 		} catch (IOException e) {
+			Log.i("chen","exe="+e.toString());
 			e.printStackTrace();
 			
 		}

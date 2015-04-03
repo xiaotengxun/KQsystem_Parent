@@ -20,16 +20,21 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name="com.sdjzu.parent.SpashAct"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.NoTitleBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.sdjzu.parent.LoginAct" >
+        <activity
+            android:name="com.sdjzu.parent.LoginAct"
+            android:theme="@android:style/Theme.NoTitleBar" >
         </activity>
-        <activity android:name="com.sdjzu.parent.ParentIndexAct" >
+        <activity
+            android:name="com.sdjzu.parent.ParentIndexAct"
+            android:theme="@android:style/Theme.NoTitleBar" >
         </activity>
         <activity android:name="com.yc.im.boot.ChatFriendlistAct" >
         </activity>

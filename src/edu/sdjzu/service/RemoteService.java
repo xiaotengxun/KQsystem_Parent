@@ -51,17 +51,16 @@ public class RemoteService extends Service {
 			public void run() {
 				while (isInfoGetting) {
 					Log.i("chen", "getInfo ing");
-					List<String> list = manageTool.getLatestKqInfoByUno(LoginAct.userName);
+					List<String> list = manageTool.getLatestKqInfoByParentNo(LoginAct.userName);
 					List<KQInfo> listKq = new ArrayList<KQInfo>();
 					for (String s : list) {
 						String[] sArray = s.split("、");
 						Log.i("chen", "msg=" + s);
 						if (sArray.length >= 2) {
 							KQInfo kqInfo = new KQInfo();
-							kqInfo.setTname(sArray[1]);
-							kqInfo.setIsRead(0);
-							kqInfo.setDateTime(CurrentDateTimeSec());
+							kqInfo.setDateTime(sArray[1]);
 							kqInfo.setMsg(sArray[0]);
+							kqInfo.setIsRead(0);
 							listKq.add(kqInfo);
 						}
 					}

@@ -342,11 +342,9 @@ public class WebTool {
 		try {
 			ht.call(SOAP_ACTION, envelope);
 		} catch (XmlPullParserException e1) {
-			// TODO Auto-generated catch block
 			e1.printStackTrace();
 			return result;
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 			return result;
 		}
@@ -358,6 +356,7 @@ public class WebTool {
 		} catch (SoapFault e) {
 			e.printStackTrace();
 		}
+		Log.i("chen", "result="+result);
 		return result;
 	}
 	/**
@@ -366,10 +365,10 @@ public class WebTool {
 	 * @param uno
 	 * @return
 	 */
-	public List<String> getLatestKqInfoByUno(String uno) {
+	public List<String> getLatestKqInfoByParentNo(String uno) {
 		// getStuKQTBbyUno
 		List<String> listPKQ = new ArrayList<String>();
-		METHOD_NAME = "getLatestKqInfoByNo";
+		METHOD_NAME = "getLatestKqInfoByParentNo";
 		SOAP_ACTION = NAMESPACE + METHOD_NAME;
 		SoapObject rpc = new SoapObject(NAMESPACE, METHOD_NAME);
 		rpc.addProperty("keyNo", uno);
