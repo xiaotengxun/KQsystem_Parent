@@ -13,12 +13,12 @@
         android:orientation="horizontal" >
 
         <ImageView
-            android:id="@+id/kq_kqinfo_delete"
+            android:id="@+id/info_delete"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:clickable="true"
             android:src="@drawable/kq_info_delete_no"
-            android:visibility="visible" />
+            android:visibility="invisible" />
     </LinearLayout>
 
     <RelativeLayout
@@ -42,7 +42,7 @@
         android:orientation="vertical" >
 
         <TextView
-            android:id="@+id/kq_kqinfo_teacher"
+            android:id="@+id/info_ttitle"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="chenshuwan"
@@ -50,18 +50,19 @@
             android:textSize="15sp" />
 
         <TextView
-            android:id="@+id/kq_kqinfo_msg"
+            android:id="@+id/info_msg"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="3dp"
             android:ellipsize="end"
-            android:singleLine="true"
             android:paddingRight="40dp"
+            android:singleLine="true"
+            android:text="fsafsasaffsa"
             android:textColor="@color/color_black"
             android:textSize="15sp" />
 
         <TextView
-            android:id="@+id/kq_kqinfo_time"
+            android:id="@+id/info_time"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="3dp"

@@ -13,4 +13,7 @@ public class Attr {
 	public static final String userType = "p";// 用戶类型
 	public static final String BROAD_ACTION_NETWORK_CONNECTED = "BROAD_ACTION_NETWORK_CONNECTED";// 网络连接所发送的广播的的action
 	public static final long netWorkGetPerTime = 5000;// 每隔这些时间判断网络，如果网络由没连接变为连接则发送广播
+	public static String userName = "";
+	public static boolean isLogin=false;
+	public static final String userRegisterKey = "userRegisterKey";
 }

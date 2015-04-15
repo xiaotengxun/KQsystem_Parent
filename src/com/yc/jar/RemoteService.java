@@ -5,8 +5,7 @@ import android.app.PendingIntent;
 import android.app.Service;
 import android.content.Intent;
 import android.os.IBinder;
-
-import com.example.androidclient.R;
+import edu.sdjzu.parent.R;
 
 public class RemoteService extends Service {
 	private AlarmManager mAlarmManager = null;
@@ -28,11 +27,11 @@ public class RemoteService extends Service {
 	}
 
 	private void initAlarm() {
-		Intent intent = new Intent(getString(R.string.service_action));
-		mAlarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
-		mPendingIntent = PendingIntent.getService(this, 0, intent, Intent.FLAG_ACTIVITY_NEW_TASK);
-		long now = System.currentTimeMillis();
-		mAlarmManager.setInexactRepeating(AlarmManager.RTC, now, 60000, mPendingIntent);
+//		Intent intent = new Intent(getString(R.string.service_action));
+//		mAlarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
+//		mPendingIntent = PendingIntent.getService(this, 0, intent, Intent.FLAG_ACTIVITY_NEW_TASK);
+//		long now = System.currentTimeMillis();
+//		mAlarmManager.setInexactRepeating(AlarmManager.RTC, now, 60000, mPendingIntent);
 	}
 
 	@Override

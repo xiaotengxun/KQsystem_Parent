@@ -1,0 +1,78 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffff"
+    android:paddingTop="10dp" >
+
+    <ImageView
+        android:id="@+id/chat_right_bg"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignBottom="@+id/chat_right_tv"
+        android:layout_alignLeft="@+id/chat_right_tv"
+        android:layout_alignRight="@+id/chat_right_tv"
+        android:layout_alignTop="@+id/chat_right_tv"
+        android:scaleType="fitXY"
+        android:src="@drawable/icon_chat_right_bg" />
+
+    <ImageView
+        android:id="@+id/chat_left_bg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/chat_left_tv"
+        android:layout_alignLeft="@+id/chat_left_tv"
+        android:layout_alignRight="@+id/chat_left_tv"
+        android:layout_alignTop="@+id/chat_left_tv"
+        android:scaleType="fitXY"
+        android:src="@drawable/icon_chat_left_bg"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/chat_left_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/chat_left_tv"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="2013" />
+
+    <TextView
+        android:id="@+id/chat_right_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/chat_right_tv"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:text="2013" />
+
+    <TextView
+        android:id="@+id/chat_left_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="50dp"
+        android:paddingBottom="20dp"
+        android:paddingLeft="40dp"
+        android:paddingRight="30dp"
+        android:paddingTop="20dp"
+        android:text="chen"
+        android:textColor="#000000"
+        android:textSize="22sp"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/chat_right_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="50dp"
+        android:paddingBottom="20dp"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        android:paddingTop="20dp"
+        android:text="chen"
+        android:textColor="#000000"
+        android:textSize="22sp"
+        android:visibility="visible" />
+
+</RelativeLayout>

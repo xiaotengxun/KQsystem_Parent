@@ -1,10 +1,11 @@
 package com.yc.im.util;
 
-import com.example.androidclient.R;
-import com.yc.jar.ThreadPoolUtil;
-
 import android.app.Application;
 import android.content.Intent;
+
+import com.yc.jar.ThreadPoolUtil;
+
+import edu.sdjzu.parent.R;
 
 public class DemoApplication extends Application {
 
@@ -14,8 +15,8 @@ public class DemoApplication extends Application {
 		init();
 	}
 
-	private void init(){
-		startService(new Intent(getString(R.string.service_action)));
+	private void init() {
+		// startService(new Intent(getString(R.string.service_action)));
 		ThreadPoolUtil.initThreadPool();
 	}
 }

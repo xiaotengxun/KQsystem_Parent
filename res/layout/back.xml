@@ -1,0 +1,14 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#473fb6" >
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="50dp"
+        android:layout_height="fill_parent"
+        android:background="@drawable/bg_btn"
+        android:clickable="true"
+        android:src="@drawable/icon_back" />
+
+</RelativeLayout>

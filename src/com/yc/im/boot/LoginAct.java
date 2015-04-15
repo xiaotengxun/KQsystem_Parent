@@ -11,10 +11,11 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.example.androidclient.R;
 import com.yc.im.model.PresenceModel;
 import com.yc.im.util.ChatUtil;
 import com.yc.jar.ThreadPoolUtil;
+
+import edu.sdjzu.parent.R;
 
 public class LoginAct extends Activity {
 	private Button btnLogin;

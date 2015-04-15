@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.androidclient"
+    package="edu.sdjzu.parent"
     android:versionCode="1"
     android:versionName="1.0" >
 
-    <uses-permission android:name="android.permission.INTERNET" >
-    </uses-permission>
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
 
     <uses-sdk
         android:minSdkVersion="14"
@@ -19,7 +20,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.sdjzu.parent.SpashAct"
+            android:name="edu.sdjzu.parent.SpashAct"
             android:label="@string/app_name"
             android:theme="@android:style/Theme.NoTitleBar" >
             <intent-filter>
@@ -29,24 +30,36 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.sdjzu.parent.LoginAct"
+            android:name="edu.sdjzu.parent.LoginAct"
             android:theme="@android:style/Theme.NoTitleBar" >
         </activity>
         <activity
-            android:name="com.sdjzu.parent.ParentIndexAct"
+            android:name="edu.sdjzu.parent.ParentIndexAct"
             android:theme="@android:style/Theme.NoTitleBar" >
         </activity>
         <activity android:name="com.yc.im.boot.ChatFriendlistAct" >
         </activity>
-        <activity android:name="com.yc.im.boot.ChatAct" >
+        <activity
+            android:name="edu.sdjzu.parent.ChatAct"
+            android:theme="@android:style/Theme.NoTitleBar" >
         </activity>
 
-        <service android:name="com.yc.jar.RemoteService" >
+        <service android:name="edu.sdjzu.service.RemoteService" >
             <intent-filter>
-                <action android:name="com.yc.service.backgourond" />
+                <action android:name="com.parent.service.backgourond" />
             </intent-filter>
         </service>
 
+        <receiver android:name="edu.sdjzu.broadcast.NewChatInfoReceiver" >
+            <intent-filter>
+                <action android:name="parent.msg.receiver" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="edu.sdjzu.broadcast.NewKqInfoReceiver" >
+            <intent-filter>
+                <action android:name="com.parent.new.kq" />
+            </intent-filter>
+        </receiver>
         <receiver android:name="com.yc.jar.ServiceBroadReceiver" >
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />

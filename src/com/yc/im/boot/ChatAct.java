@@ -19,13 +19,14 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.example.androidclient.R;
 import com.yc.im.model.MsgModel;
 import com.yc.im.util.ChatUtil;
 import com.yc.jar.ChatConnectTool;
 import com.yc.jar.ChatNewInfoOnListener;
 import com.yc.jar.ThreadPoolUtil;
 import com.yc.jar.XMLPaserUtil;
+
+import edu.sdjzu.parent.R;
 
 public class ChatAct extends Activity {
 	private ListView chatListView;

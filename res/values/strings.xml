@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-<string name="back_tip1">再按一次推出!</string>
+
+    <item name="first_tag" type="id"></item>
+    <item name="second_tag" type="id"></item>
+    <item name="third_tag" type="id"></item>
+    <string name="kq_new_kq_tip">新考勤</string>
+    <string name="kq_new_chat_tip">新消息</string>
+    <string name="back_tip1">再按一次推出!</string>
     <string name="app_name">考勤家长版</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
-    <string name="service_action">com.yc.service.backgourond</string>
+    <string name="ACTION_NEW_KQ_INFO_BG">com.parent.service.backgourond</string>
+      <string name="ACTION_NEW_KQ">com.parent.new.kq</string>
+    <string name="ACTION_NEW_CHATINFO_ACTION">parent.msg.receiver</string>
+    
     <string name="LoginActivity.CheckBox.RemPass">记住密码</string>
     <string name="LoginActivity.CheckBox.AutoLogin">自动登陆</string>
     <string name="LoginActivity.EditText.UserName">   用	户	名</string>
@@ -13,13 +22,17 @@
     <string name="login_progress_tip2">请等待...</string>
     <string name="login_error_tip1">用户名或密码不能为空！</string>
     <string name="login_error_tip2">登陆失败！</string>
-	<string name="kq_lable1">考勤统计</string>
-	<string name="kq_lable2">考勤记录</string>
-	<string name="kq_percentage">出勤率：</string>
-	<string name="kq_chidao">迟到</string>
-	<string name="kq_qingjia">请假</string>
-	<string name="kq_queqing">缺勤</string>
-	<string name="btn_delete">删除</string>
-	<string name="btn_cancel">取消</string>
-	<string name="ACTION_KQ_LATEST_INFO">com.yc.kq.last.info.action</string>
+    <string name="kq_lable1">考勤统计</string>
+    <string name="kq_lable2">考勤记录</string>
+    <string name="kq_percentage">出勤率：</string>
+    <string name="kq_chidao">迟到</string>
+    <string name="kq_qingjia">请假</string>
+    <string name="kq_queqing">缺勤</string>
+    <string name="btn_delete">删除</string>
+    <string name="kq_kq_noinfo_tip">暂无考勤信息！</string>
+    <string name="kq_no_info_tip">暂无最新消息</string>
+    <string name="info_add">写信息</string>
+    <string name="btn_cancel">取消</string>
+  
+
 </resources>

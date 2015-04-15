@@ -1,12 +1,11 @@
 package com.yc.jar;
 
-import com.example.androidclient.R;
-
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.util.Log;
+import edu.sdjzu.parent.R;
 
 public class ServiceBroadReceiver extends BroadcastReceiver {
 	private static ChatConnectStateListener chatConnectStateListener = null;
@@ -31,16 +30,16 @@ public class ServiceBroadReceiver extends BroadcastReceiver {
 
 	@Override
 	public void onReceive(Context context, Intent intent) {
-		internet = new InternetStatus(context);
-		if (Intent.ACTION_BOOT_COMPLETED.equals(intent.getAction())
-				|| Intent.ACTION_USER_PRESENT.equals(intent.getAction())) {
-			Intent startServiceIntent = new Intent(context.getString(R.string.service_action));
-			startServiceIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-			context.startService(startServiceIntent);
-		} else if (ConnectivityManager.CONNECTIVITY_ACTION.equals(intent.getAction())) {
-			Log.i("chen", "net change");
-			ThreadPoolUtil.getThreadPool().execute(connectToServerTask);
-		}
+//		internet = new InternetStatus(context);
+//		if (Intent.ACTION_BOOT_COMPLETED.equals(intent.getAction())
+//				|| Intent.ACTION_USER_PRESENT.equals(intent.getAction())) {
+//			Intent startServiceIntent = new Intent(context.getString(R.string.service_action));
+//			startServiceIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+//			context.startService(startServiceIntent);
+//		} else if (ConnectivityManager.CONNECTIVITY_ACTION.equals(intent.getAction())) {
+//			Log.i("chen", "net change");
+//			ThreadPoolUtil.getThreadPool().execute(connectToServerTask);
+//		}
 	}
 
 	public static void setChatStateChangeListener(ChatConnectStateListener cs) {

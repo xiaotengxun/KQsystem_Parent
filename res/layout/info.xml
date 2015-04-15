@@ -8,28 +8,50 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:text="@string/kq_kq_noinfo_tip"
+        android:text="@string/kq_no_info_tip"
         android:textColor="#000000" />
 
     <ListView
-        android:id="@+id/kq_kqinfo_lsv"
+        android:id="@+id/info_lsv"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:layout_above="@+id/rel_menu"
         android:scrollbars="none"
+        android:background="#ffffff"
         android:visibility="invisible" >
     </ListView>
+
+    <LinearLayout
+        android:id="@+id/info_add"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bg_btn"
+        android:clickable="true"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="@string/info_add"
+            android:textColor="@color/color_black"
+            android:textSize="20sp" />
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/rel_menu"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
+        android:background="@color/color_bg"
         android:orientation="horizontal"
         android:visibility="gone" >
 
         <TextView
-            android:id="@+id/kq_info_menu_delete"
+            android:id="@+id/info_menu_delete"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -47,7 +69,7 @@
             android:background="@color/color_blue" />
 
         <TextView
-            android:id="@+id/kq_info_menu_cancel"
+            android:id="@+id/info_menu_cancel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -59,5 +81,20 @@
             android:textColor="@color/color_blue"
             android:textSize="20sp" />
     </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/info_add_user_bg"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:paddingLeft="20dp"
+        android:visibility="invisible" >
+
+        <ListView
+            android:id="@+id/info_add_user_lsv"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#ffffff" >
+        </ListView>
+    </RelativeLayout>
 
 </RelativeLayout>
